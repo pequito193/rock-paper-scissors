@@ -1,10 +1,9 @@
-const possibleChoices = ['rock', 'paper', 'scissors'];
 let scoreComputer = 0;
 let scorePlayer = 0;
 
 function computerPlay() {
+    const possibleChoices = ['rock', 'paper', 'scissors'];
     let computerChoice = possibleChoices[Math.floor(Math.random() * possibleChoices.length)];
-    console.log(computerChoice);
     return computerChoice;
 }
 
@@ -36,9 +35,13 @@ function playRound(playerSelection) {
             }
         break;
     }
-    console.log('Player: ' + scorePlayer);
-    console.log('Computer: ' + scoreComputer);
+    resultPlayer.textContent = 'Player: ' + scorePlayer + ' (' + playerSelection + ')'
+    resultComputer.textContent = 'Computer: ' + scoreComputer + ' (' + computerChoice + ')'
 }
 
-const result = document.getElementById('result')
-result.textContent = 'hi'
+const results = document.querySelector(".results")
+const resultPlayer = document.createElement('p')
+const resultComputer = document.createElement('p')
+console.log(results)
+results.appendChild(resultPlayer)
+results.appendChild(resultComputer)
