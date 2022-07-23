@@ -1,1 +1,1 @@
-# rock-paper-scissors
+Rock paper scissors game, https://pequito193.github.io/rock-paper-scissors/
